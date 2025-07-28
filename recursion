@@ -9,3 +9,4 @@ def fun1(x):
     print(x)
 x=3 
 fun1(x) 
+whiteboard link:- https://whiteboard.cloud.microsoft/me/whiteboards/76e7f0db-7cfe-43ce-905a-bc4a8f00ea1a
