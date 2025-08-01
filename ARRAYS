@@ -108,3 +108,17 @@ n = len(nums)
 for i in range(0,n):
     for j in range(i,n):
         print(nums[i:j+1]) 
+----------------------------------------------------------------------------------------------------------------
+Maximum subarray Sum(leetcode) Brute Force . T.C:-O(N**2) 
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        n = len(nums)
+        ans = [] 
+        for i in range(0,n):
+            for j in range(i,n):
+                ans.append(nums[i:j+1]) 
+        Max=float("-inf") 
+        for lst in ans:
+            if(sum(lst)>Max):
+                Max=sum(lst) 
+        return Max
