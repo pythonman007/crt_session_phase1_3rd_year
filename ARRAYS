@@ -1,1 +1,13 @@
-
+Product of subarray except it self:
+--------------------------------------------------------------------
+Brute Force solution T.C :- O(N**2) 
+nums = [1,2,3,4] 
+n = len(nums) 
+result = [] 
+for i in range(0,n):
+    product = 1 
+    for j in range(0,n):
+        if(i!=j):
+            product=product*nums[j] 
+    result.append(product)
+print(result)
