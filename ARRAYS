@@ -11,3 +11,28 @@ for i in range(0,n):
             product=product*nums[j] 
     result.append(product)
 print(result)
+-------------------------------------------------------------------------------------
+from typing import List
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        n = len(nums) 
+        no_of_zeros = 0 
+        prod = 1 
+        for i in nums:
+            if(i==0):
+                no_of_zeros+=1 
+            else:
+                prod*=i 
+        ans = [] 
+        for i in nums:
+            if(no_of_zeros>1):
+                ans.append(0)
+            else:
+                if(no_of_zeros==1):
+                    if(i==0):
+                        ans.append(prod)
+                    else:
+                        ans.append(0)
+                else:
+                    ans.append(prod//i)
+        return ans 
