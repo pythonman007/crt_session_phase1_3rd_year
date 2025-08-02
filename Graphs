@@ -23,4 +23,25 @@ class Solution:
             adjList[n].append(m) 
             adjList[m].append(n) 
         return adjList 
-        
+-------------------------------------------------------------------------------------------------------
+BFS IN GRAPH :- 
+class Solution:
+    # Function to return Breadth First Search Traversal of given graph.
+    def bfs(self, adj):
+        # code here
+        startNode = 0 
+        v = len(adj) # no of nodes 
+        visited = [0]*v 
+        q=[] 
+        ans = [] 
+        if(visited[startNode]==0):
+            visited[startNode]=1 
+            q.append(startNode) 
+            while(len(q)>0):
+                node = q.pop(0)
+                ans.append(node)
+                for val in adj[node]:
+                    if(visited[val]==0):
+                        visited[val]=1 
+                        q.append(val) 
+            return ans 
