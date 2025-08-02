@@ -1,0 +1,13 @@
+AdjMatrix creation ;- 
+v = 5  
+e = 7 
+edges = [[0,1], [0,4], [4,1], [4,3], [1,3], [1,2], [3,2]]
+adjMatrix = [] 
+for i in range(v):
+    lst = [0]*v 
+    adjMatrix.append(lst) 
+for n,m in edges:
+    adjMatrix[n][m]=1 
+    adjMatrix[m][n]=1 
+print(adjMatrix)
+    
