@@ -10,4 +10,17 @@ for n,m in edges:
     adjMatrix[n][m]=1 
     adjMatrix[m][n]=1 
 print(adjMatrix)
-    
+--------------------------------------------------------------------------------------
+AdjList Creation :- 
+from typing import List
+class Solution:
+    def printGraph(self, V : int, edges : List[List[int]]) -> List[List[int]]:
+        # code here
+        adjList = [] 
+        for i in range(V):
+            adjList.append([]) 
+        for n,m in edges:
+            adjList[n].append(m) 
+            adjList[m].append(n) 
+        return adjList 
+        
