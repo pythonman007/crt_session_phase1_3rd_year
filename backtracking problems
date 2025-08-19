@@ -1,3 +1,4 @@
+whiteboard link :- https://whiteboard.cloud.microsoft/me/whiteboards/1d640b99-31d8-4423-97b5-f52e3b6c31f4
 SUBSEST PROBLEM :- TAKE / NOT TAKE APPROACH .
 class Solution:
     def generate(self,ind,curr_subset,ans,nums):
